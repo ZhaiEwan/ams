@@ -1,0 +1,20 @@
+{
+    "name": "ams",
+    "version": "0.0.1",
+    "private": true,
+    "workspaces": [
+        "ams-client",
+        "ams-server"
+    ],
+    "scripts": {
+        "dev": "npm run dev --workspaces --if-present",
+        "dev:client": "npm run dev --workspace=ams-client",
+        "dev:server": "cd ams-server && cargo run",
+        "build": "npm run build --workspaces --if-present",
+        "build:client": "npm run build --workspace=ams-client",
+        "build:server": "cd ams-server && cargo build --release",
+        "lint": "npm run lint --workspaces --if-present",
+        "format": "npm run format --workspaces --if-present",
+        "typecheck": "npm run typecheck --workspaces --if-present"
+    }
+}
